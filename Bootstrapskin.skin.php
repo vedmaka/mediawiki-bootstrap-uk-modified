@@ -489,6 +489,8 @@ class StrappingTemplate extends BaseTemplate
                     }
                     $navTemp = $this->data['content_actions']['edit'];
 
+                    echo "<!--".print_r($this->data['content_actions'],1)."-->";
+
                     if ( $navTemp ) { ?>
                         <div class="actions pull-left nav">
                             <a id="b-edit" href="<?php echo $navTemp['href']; ?>" class="btn"><i
