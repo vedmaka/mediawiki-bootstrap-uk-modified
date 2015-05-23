@@ -1,0 +1,18 @@
+/* Add your custom theme overrides here */
+
+#searchform {
+    position: relative;
+    top: 10px;
+}
+
+#right-nav > li {
+    float: right !important;
+}
+
+#pt-anonuserpage, #pt-anontalk {
+    display: none;
+}
+
+#p-logo a {
+    background-color: transparent !important;
+}
