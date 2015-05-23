@@ -888,7 +888,7 @@ class StrappingTemplate extends BaseTemplate
         $mainPageLink = $this->data['nav_urls']['mainpage']['href'];
         $toolTip = Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) );
         ?>
-        <ul class="nav logo-container" role="navigation">
+        <ul class="nav logo-container" role="navigation" style="  margin-left: -20px;">
             <li id="p-logo"><a
                     href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>><img
                         src="<?php $this->text( 'logopath' ); ?>" alt="<?php $this->html( 'sitename' ); ?>"
