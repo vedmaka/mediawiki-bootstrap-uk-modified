@@ -285,6 +285,11 @@ class StrappingTemplate extends BaseTemplate
         <div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
         <!-- /sitenotice -->
     <?php endif; ?>
+
+    <h1 id="firstHeading" class="firstHeading page-header" style="margin-left: -15px;">
+                        <span dir="auto"><?php $this->html( 'title' ) ?></span>
+                    </h1>
+
       <!-- bodyContent -->
       <div id="bodyContent">
         <?php if ( $this->data['newtalk'] ): ?>
@@ -325,9 +330,7 @@ class StrappingTemplate extends BaseTemplate
             # If there's no custom layout, then we automagically add one ?>
             <div id="innerbodycontent" class="row nolayout">
                 <div class="offset1 span10">
-                    <h1 id="firstHeading" class="firstHeading page-header">
-                        <span dir="auto"><?php $this->html( 'title' ) ?></span>
-                    </h1>
+
                     <!-- subtitle -->
                     <div
                         id="contentSub" <?php $this->html( 'userlangattributes' ) ?>><?php $this->html( 'subtitle' ) ?></div>
