@@ -308,7 +308,7 @@ class StrappingTemplate extends BaseTemplate
 
 
         <!-- innerbodycontent -->
-            <div id="innerbodycontent" class="row nolayout">
+            <div id="innerbodycontent" class="row nolayout" style="margin-top: 10px;">
                 <div class="offset1 span10">
 
                     <!-- subtitle -->
