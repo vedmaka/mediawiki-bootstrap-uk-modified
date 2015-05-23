@@ -489,6 +489,16 @@ class StrappingTemplate extends BaseTemplate
                     }
                     $navTemp = $this->data['content_actions']['edit'];
 
+                    if( array_key_exists( 'form_edit', $this->data['content_actions'] ) ) {
+                        $navTemp = $this->data['content_actions']['form_edit'];
+                    }
+
+                    if( array_key_exists( 've-edit', $this->data['content_actions'] ) ) {
+                        $navTemp = $this->data['content_actions']['edit'];
+                    }
+
+
+
                     echo "<!--".print_r($this->data['content_actions'],1)."-->";
 
                     if ( $navTemp ) { ?>
