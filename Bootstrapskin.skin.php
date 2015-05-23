@@ -534,6 +534,9 @@ class StrappingTemplate extends BaseTemplate
                                     if ( preg_match( '/^ca-(view|edit)$/', $link['id'] ) ) {
                                         continue;
                                     }
+                                    if( $link['id'] == 'ca-edit' ) {
+                                        continue;
+                                    }
 
                                     ?>
                                 <li<?php echo $link['attributes'] ?>><a
