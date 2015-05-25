@@ -77,6 +77,3 @@ $wgFooterIcons['poweredby']['youricon'] = array(
 	      "url" => "", //url to your wiki
 	      "alt" => "", //alt text
           );
-
-$wgVisualEditorSupportedSkins[] = 'bootstrap';
-$wgVisualEditorSupportedSkins[] = 'bootstrapskin';

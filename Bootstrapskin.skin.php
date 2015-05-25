@@ -222,8 +222,6 @@ class StrappingTemplate extends BaseTemplate
 
         <? if( !$this->getSkin()->getUser()->isAnon() ): ?>
             <li style="font-weight: bold; margin-top:10px"><?php $this->renderNavigation( array( 'EDIT' ) ); ?></li>
-
-
         <? else: ?>
             <li style="margin-top:10px">
                 <div class="actions pull-left nav">
@@ -499,8 +497,8 @@ class StrappingTemplate extends BaseTemplate
 
                     if ( $navTemp ) { ?>
                         <div class="actions pull-left nav">
-                            <a id="<?=$navTemp['id']?>" href="<?php echo $navTemp['href']; ?>" class="btn" style="font-weight: bold;"><i
-                                    class="icon-edit"></i> <?php echo $navTemp['text']; ?></a>
+                            <a id="<?=$navTemp['id']?>" href="<?php echo $navTemp['href']; ?>" class="btn" style="font-weight: bold;">
+                                <i class="icon-edit"></i> <?php echo $navTemp['text']; ?></a>
                         </div>
 
                     <?php }
