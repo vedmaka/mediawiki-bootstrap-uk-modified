@@ -181,7 +181,9 @@ class StrappingTemplate extends BaseTemplate
 
         <li style="margin-top:10px">
             <div class="actions pull-left nav">
-                <a id="b-edit" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" class="btn"><i class="fa fa-home"></i> Home</a>
+                <a id="b-edit" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" class="btn">
+                    <img style="width: 100px;" src="<?php $this->text( 'logopath' ); ?>" alt="<?php $this->html( 'sitename' ); ?>">
+                </a>
             </div>
         </li>
 
@@ -235,34 +237,6 @@ class StrappingTemplate extends BaseTemplate
 <?php } ?>
     <div id="mw-page-base" class="noprint"></div>
     <div id="mw-head-base" class="noprint"></div>
-
-    <!-- Header -->
-    <div id="page-header" class="container-fluid <?php echo $this->data['loggedin'] ? 'signed-in' : 'signed-out'; ?>">
-      <div class="pull-left">
-
-      <?php
-        if ( $wgBootstrapSkinLogoLocation == 'bodycontent' ) {
-            $this->renderLogo();
-        } ?>
-	  
-	  </div>
-
-      <div class="col-md-6 col-sm-4 pull-right">
-	  <ul class="navigation nav nav-pills pull-right searchform-disabled">
-
-      <?php
-        $this->renderNavigation( array( 'SIDEBAR' ) );
-
-        if ( $wgSearchPlacement['nav'] ) {
-            $this->renderNavigation( array( 'SEARCHNAV' ) );
-        }
-
-        ?>
-
-      </ul>
-
-    </div>
-    </div>
 
     <?php if ( $this->data['loggedin'] ) {
         $userStateClass = "user-loggedin";
@@ -885,6 +859,8 @@ class StrappingTemplate extends BaseTemplate
      */
     private function renderLogo()
     {
+
+        return;
         $mainPageLink = $this->data['nav_urls']['mainpage']['href'];
         $toolTip = Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) );
         ?>
