@@ -1,5 +1,7 @@
 
 	<div id="footer" class="footer container-fluid"<?php $this->html( 'userlangattributes' ) ?>>
+
+    <!--
     <div class="row">
 	<?php
       $footerLinks = $this->getFooterLinks();
@@ -41,7 +43,8 @@
               endforeach; 
             }
           ?>
-	</div>
+	</div>-->
+
 	</div>	
 	
     <footer>

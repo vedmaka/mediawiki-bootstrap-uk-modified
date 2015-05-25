@@ -176,7 +176,8 @@ class StrappingTemplate extends BaseTemplate
         <?php if ( $wgGroupPermissions['*']['edit'] || $wgBootstrapSkinAnonNavbar || $this->data['loggedin'] ) { ?>
 <div id="userbar" class="navbar container-fluid">
   <div class="navbar-inner">
-      <div class="col-md-4 pull-left hidden-xs" style="padding-left: 0; margin-left: 0;">
+      <div class="col-md-8 pull-left" style="padding-left: 0; margin-left: 0;">
+
       <ul id="tabs-default-lighter" class="nav nav-tabs nav-tabs-lighter">
 
         <li style="margin-top:10px">
@@ -187,8 +188,54 @@ class StrappingTemplate extends BaseTemplate
             </div>
         </li>
 
+        <? if( !$this->getSkin()->getUser()->isAnon() ): ?>
+            <li><?php $this->renderNavigation( array( 'PERSONALNAV' ) ); ?></li>
+        <? endif; ?>
+
+        <li><?php $this->renderNavigation( array( 'PAGE' ) ); ?></li>
+
 		<li><?php if ( !isset($portals['TOOLBOX']) ) {
         $this->renderNavigation( array( 'TOOLBOX' ) ); ?></li>
+
+        <!-- Create new page dropdown -->
+        <ul class="nav pull-left" role="navigation" >
+            <li class="dropdown" id="p-notifications">
+                <a data-toggle="dropdown" class="dropdown-toggle" role="button" style="font-weight: bold;">Create <b class="caret"></b></a>
+                <ul class="dropdown-menu" style="padding-bottom: 15px;">
+                    <li>
+                        <div class="input-group has-light hidden-xs hidden-sm" style="margin-right: 10px; padding: 0 10px 0 20px;   margin-bottom: 20px; width: 250px;">
+                            <form style="  display: table;" class="navbar-search" action="/index.php" id="searchform" method="get">
+                                <input id="createNewPage" class="form-control" type="search" title="Create new page" placeholder="New page title" name="title" value="" autocomplete="off">
+                                <input type="hidden" name="veaction" value="edit" />
+                                <span class="input-group-btn">
+                                    <input type="submit" name="go" value="Create" title="Go to a page with this exact name if exists" id="mw-createPagebtn" class="searchButton btn btn-default" />
+                                </span>
+                            </form>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/index.php/Special:FormEdit/Clause">Create new <b>Clause</b></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <? if( !$this->getSkin()->getUser()->isAnon() ): ?>
+            <li style="font-weight: bold; margin-top:10px"><?php $this->renderNavigation( array( 'EDIT' ) ); ?></li>
+
+
+        <? else: ?>
+            <li style="margin-top:10px">
+                <div class="actions pull-left nav">
+                    <a class="btn" href="<?=SpecialPage::getSafeTitleFor('UserLogin')->getFullURL()?>>">Login</a>
+                    <? if( $this->getSkin()->getUser()->isAllowed('createaccount') ): ?>
+                    or
+                    <a class="btn" href="<?=SpecialPage::getSafeTitleFor('UserLogin')->getFullURL('action=signup')?>>">Register</a>
+                    <? endif; ?>
+                </div>
+            </li>
+        <? endif; ?>
+
 
         </ul>
 
@@ -210,7 +257,7 @@ class StrappingTemplate extends BaseTemplate
       </div>
 	  </div>
 
-      <div class="pull-right col-md-8">
+      <div class="pull-right col-md-4">
         <?php
         # Personal menu (at the right)
         # $this->renderNavigation( array( 'PERSONAL' ) );
@@ -218,17 +265,12 @@ class StrappingTemplate extends BaseTemplate
 
         <ul class="nav nav-tabs nav-tabs-lighter" id="right-nav">
 
-            <li><?php $this->renderNavigation( array( 'PERSONALNAV' ) ); ?></li>
-            <li><?php $this->renderNavigation( array( 'PAGE' ) ); ?></li>
-            <!--<li><?php /*$this->renderNavigation( array( 'ACTIONS' ) ); */?></li>-->
-
-            <li style="margin-top:10px"><?php $this->renderNavigation( array( 'EDIT' ) ); ?></li>
-
             <?
             if ( $wgSearchPlacement['header'] ) {
                 $this->renderNavigation( array( 'SEARCH' ) );
             }
             ?>
+
         </ul>
 
       </div>
@@ -457,7 +499,7 @@ class StrappingTemplate extends BaseTemplate
 
                     if ( $navTemp ) { ?>
                         <div class="actions pull-left nav">
-                            <a id="<?=$navTemp['id']?>" href="<?php echo $navTemp['href']; ?>" class="btn"><i
+                            <a id="<?=$navTemp['id']?>" href="<?php echo $navTemp['href']; ?>" class="btn" style="font-weight: bold;"><i
                                     class="icon-edit"></i> <?php echo $navTemp['text']; ?></a>
                         </div>
 
@@ -539,7 +581,7 @@ class StrappingTemplate extends BaseTemplate
 
           </ul>
 
-          </ul>
+          <!-- </ul> -->
 
           <?php
                     break;
