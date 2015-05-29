@@ -31,4 +31,5 @@
 
 div.ve-ui-toolbar {
     box-sizing: initial !important;
+    -webkit-box-sizing: initial !important;
 }
