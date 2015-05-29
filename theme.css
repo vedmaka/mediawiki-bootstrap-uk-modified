@@ -29,6 +29,6 @@
     height: 2.875em !important;
 }
 
-div.ve-ui-toolbar div.oo-ui-widget {
+div.ve-ui-toolbar {
     box-sizing: initial !important;
 }
