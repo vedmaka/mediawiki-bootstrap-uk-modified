@@ -37,3 +37,7 @@ div.ve-ui-toolbar div, div.ve-ui-toolbar span, div.ve-ui-toolbar a {
     box-sizing: inherit !important;
     -webkit-box-sizing: inherit !important;
 }
+
+footer {
+    padding-top: 100px;
+}
