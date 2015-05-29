@@ -33,3 +33,7 @@ div.ve-ui-toolbar {
     box-sizing: initial !important;
     -webkit-box-sizing: initial !important;
 }
+div.ve-ui-toolbar div {
+    box-sizing: inherit !important;
+    -webkit-box-sizing: inherit !important;
+}
