@@ -225,7 +225,7 @@ class StrappingTemplate extends BaseTemplate
         <? else: ?>
             <li style="margin-top:10px">
                 <div class="actions pull-left nav">
-                    <a class="btn" href="<?=SpecialPage::getSafeTitleFor('UserLogin')->getFullURL()?>>">Login</a>
+                    <a class="btn" href="<?=SpecialPage::getSafeTitleFor('UserLogin')->getFullURL()?>">Login</a>
                     <? if( $this->getSkin()->getUser()->isAllowed('createaccount') ): ?>
                     or
                     <a class="btn" href="<?=SpecialPage::getSafeTitleFor('UserLogin')->getFullURL('action=signup')?>>">Register</a>
