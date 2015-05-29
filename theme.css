@@ -28,3 +28,7 @@
 .oo-ui-processDialog-location {
     height: 2.875em !important;
 }
+
+div.ve-ui-toolbar div.oo-ui-widget {
+    box-sizing: initial !important;
+}
