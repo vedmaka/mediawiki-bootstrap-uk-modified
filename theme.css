@@ -79,7 +79,7 @@ footer {
 
 .wikitable > tbody > tr:nth-child(odd) > td,
 .wikitable > tbody > tr:nth-child(odd) > th {
-    background-color: #697060;
+    background-color: rgba(189, 189, 189, 0.51);
     color: #ffffff;
 }
 
