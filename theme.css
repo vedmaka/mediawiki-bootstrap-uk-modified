@@ -17,10 +17,14 @@
     background-color: transparent !important;
 }
 
-/*.oo-ui-window-content {
-    font-size: 1.4em;
-} */
+.oo-ui-window-content {
+    font-size: 0.9em;
+}
 
 #tabs-default-lighter a.dropdown-toggle {
     font-weight: bold !important;
+}
+
+.oo-ui-processDialog-location {
+    height: 2.875em;
 }
