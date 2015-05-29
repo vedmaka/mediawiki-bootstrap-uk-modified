@@ -200,7 +200,7 @@ class StrappingTemplate extends BaseTemplate
         <!-- Create new page dropdown -->
         <ul class="nav pull-left" role="navigation" >
             <li class="dropdown" id="p-notifications">
-                <a data-toggle="dropdown" class="dropdown-toggle" role="button" style="font-weight: bold;">Create <b class="caret"></b></a>
+                <a data-toggle="dropdown" class="dropdown-toggle" role="button" style="font-weight: bold;">New <b class="caret"></b></a>
                 <ul class="dropdown-menu" style="padding-bottom: 15px;">
                     <li>
                         <div class="input-group has-light hidden-xs hidden-sm" style="margin-right: 10px; padding: 0 10px 0 20px;   margin-bottom: 20px; width: 250px;">
