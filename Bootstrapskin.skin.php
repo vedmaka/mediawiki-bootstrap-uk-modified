@@ -197,9 +197,50 @@ class StrappingTemplate extends BaseTemplate
 		<li><?php if ( !isset($portals['TOOLBOX']) ) {
         $this->renderNavigation( array( 'TOOLBOX' ) ); ?></li>
 
+        <!-- Navigation dropdown -->
+
+        <?
+            //Build up navigation dropdown from protected page:
+            $navPage = Title::newFromText( 'Navigation', NS_PROJECT );
+            if( $navPage && $navPage->exists() ) {
+                $navText = WikiPage::newFromID( $navPage->getArticleID() )->getContent()->getNativeData();
+                $matches = array();
+                preg_match_all( '/\*\s?([^\|]+)\|([^\n\r]+)/', $navText, $matches );
+                if( count($matches) > 2 ) {
+                    ?>
+                      <ul class="nav pull-left" role="navigation" >
+                          <li class="dropdown" id="p-navigation">
+                              <a data-toggle="dropdown" class="dropdown-toggle" role="button" style="font-weight: bold;">Navigation <b class="caret"></b></a>
+                              <ul class="dropdown-menu" style="padding-bottom: 15px;">
+                    <?
+                    $titles = $matches[1];
+                    $pages = $matches[2];
+                    foreach( $matches as $i => $item ) {
+                        $title = $titles[$i];
+                        $linkPage = Title::newFromText( $pages[$i] );
+                        ?>
+                            <li>
+                                <? if( $linkPage && $linkPage->exists() ): ?>
+                                    <a href="<?=$linkPage->getFullURL()?>"><?=$title?></a>
+                                <? else: ?>
+                                    <a href="/index.php/<?=$pages[$i]?>"><?=$title?></a>
+                                <? endif; ?>
+                            </li>
+                        <?
+                    }
+                    ?>
+                              </ul>
+                          </li>
+                      </ul>
+                    <?
+                }
+            }
+        ?>
+
+
         <!-- Create new page dropdown -->
         <ul class="nav pull-left" role="navigation" >
-            <li class="dropdown" id="p-notifications">
+            <li class="dropdown" id="p-newpage">
                 <a data-toggle="dropdown" class="dropdown-toggle" role="button" style="font-weight: bold;">New <b class="caret"></b></a>
                 <ul class="dropdown-menu" style="padding-bottom: 15px;">
                     <li>
