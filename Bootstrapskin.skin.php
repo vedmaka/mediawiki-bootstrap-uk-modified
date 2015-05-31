@@ -262,7 +262,7 @@ class StrappingTemplate extends BaseTemplate
         </ul>
 
         <? if( !$this->getSkin()->getUser()->isAnon() ): ?>
-            <li style="font-weight: bold; margin-top:10px"><?php $this->renderNavigation( array( 'EDIT' ) ); ?></li>
+            <li style="font-weight: bold; margin-top:10px"> <?php $this->renderNavigation( array( 'EDIT' ) ); ?> </li>
         <? else: ?>
             <li style="margin-top:10px">
                 <div class="actions pull-left nav">
@@ -516,6 +516,9 @@ class StrappingTemplate extends BaseTemplate
             $elements = array_reverse( $elements );
         }
         // Render elements
+
+        global $wgVisualEditorNamespaces;
+
         foreach ( $elements as $name => $element ) {
             echo "\n<!-- {$name} -->\n";
             switch ( $element ) {
@@ -527,7 +530,11 @@ class StrappingTemplate extends BaseTemplate
                     $navTemp = $this->data['content_actions']['edit'];
 
                     if( array_key_exists( 've-edit', $this->data['content_actions'] ) ) {
-                        $navTemp = $this->data['content_actions']['ve-edit'];
+                        if( $this->getSkin()->getTitle() && $this->getSkin()->getTitle()->exists() ) {
+                            if( in_array($this->getSkin()->getTitle()->getNamespace(), $wgVisualEditorNamespaces) ) {
+                                $navTemp = $this->data['content_actions']['ve-edit'];
+                            }
+                        }
                     }
 
                     if( array_key_exists( 'form_edit', $this->data['content_actions'] ) ) {
