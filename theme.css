@@ -316,3 +316,7 @@ table th[class*="col-"] {
     background-color: #f2dede;
 }
 
+p {
+    font-size: 18px;
+    color: #353c2c;
+}
