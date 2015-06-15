@@ -316,9 +316,10 @@ table th[class*="col-"] {
     background-color: #f2dede;
 }
 
-p {
+p, ul, ol {
     font-size: 18px;
     color: #353c2c;
+    line-height: 1.5;
 }
 
 h2, h3, h4, h5 {
