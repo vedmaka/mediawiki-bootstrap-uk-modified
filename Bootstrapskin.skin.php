@@ -174,6 +174,7 @@ class StrappingTemplate extends BaseTemplate
         ?>
 
         <?php if ( $wgGroupPermissions['*']['edit'] || $wgBootstrapSkinAnonNavbar || $this->data['loggedin'] ) { ?>
+
 <div id="userbar" class="navbar container-fluid">
   <div class="navbar-inner">
       <div class="col-md-8 pull-left" style="padding-left: 0; margin-left: 0;">
@@ -188,78 +189,85 @@ class StrappingTemplate extends BaseTemplate
             </div>
         </li>
 
+
         <? if( !$this->getSkin()->getUser()->isAnon() ): ?>
-            <li><?php $this->renderNavigation( array( 'PERSONALNAV' ) ); ?></li>
-        <? endif; ?>
 
-        <li><?php $this->renderNavigation( array( 'PAGE' ) ); ?></li>
+            <? if( !$this->getSkin()->getUser()->isAnon() ): ?>
+                <li><?php $this->renderNavigation( array( 'PERSONALNAV' ) ); ?></li>
+            <? endif; ?>
 
-		<li><?php if ( !isset($portals['TOOLBOX']) ) {
-        $this->renderNavigation( array( 'TOOLBOX' ) ); ?></li>
+            <li><?php $this->renderNavigation( array( 'PAGE' ) ); ?></li>
 
-        <!-- Navigation dropdown -->
+            <li><?php if ( !isset($portals['TOOLBOX']) ) {
+            $this->renderNavigation( array( 'TOOLBOX' ) ); } ?></li>
 
-        <?
-            //Build up navigation dropdown from protected page:
-            $navPage = Title::newFromText( 'Navigation', NS_PROJECT );
-            if( $navPage && $navPage->exists() ) {
-                $navText = WikiPage::newFromID( $navPage->getArticleID() )->getContent()->getNativeData();
-                $matches = array();
-                preg_match_all( '/\*\s?([^\|]+)\|([^\n\r]+)/', $navText, $matches );
-                if( count($matches) > 2 ) {
-                    ?>
-                      <ul class="nav pull-left" role="navigation" >
-                          <li class="dropdown" id="p-navigation">
-                              <a data-toggle="dropdown" class="dropdown-toggle" role="button" style="font-weight: bold;">Navigation <b class="caret"></b></a>
-                              <ul class="dropdown-menu" style="padding-bottom: 15px;">
-                    <?
-                    $titles = $matches[1];
-                    $pages = $matches[2];
-                    foreach( $matches as $i => $item ) {
-                        $title = $titles[$i];
-                        $linkPage = Title::newFromText( $pages[$i] );
+            <!-- Navigation dropdown -->
+
+            <?
+                //Build up navigation dropdown from protected page:
+                $navPage = Title::newFromText( 'Navigation', NS_PROJECT );
+                if( $navPage && $navPage->exists() ) {
+                    $navText = WikiPage::newFromID( $navPage->getArticleID() )->getContent()->getNativeData();
+                    $matches = array();
+                    preg_match_all( '/\*\s?([^\|]+)\|([^\n\r]+)/', $navText, $matches );
+                    if( count($matches) > 2 ) {
                         ?>
-                            <li>
-                                <? if( $linkPage && $linkPage->exists() ): ?>
-                                    <a href="<?=$linkPage->getFullURL()?>"><?=$title?></a>
-                                <? else: ?>
-                                    <a href="/index.php/<?=$pages[$i]?>"><?=$title?></a>
-                                <? endif; ?>
-                            </li>
+                          <ul class="nav pull-left" role="navigation" >
+                              <li class="dropdown" id="p-navigation">
+                                  <a data-toggle="dropdown" class="dropdown-toggle" role="button" style="font-weight: bold;">Navigation <b class="caret"></b></a>
+                                  <ul class="dropdown-menu" style="padding-bottom: 15px;">
+                        <?
+                        $titles = $matches[1];
+                        $pages = $matches[2];
+                        foreach( $matches as $i => $item ) {
+                            $title = $titles[$i];
+                            $linkPage = Title::newFromText( $pages[$i] );
+                            ?>
+                                <li>
+                                    <? if( $linkPage && $linkPage->exists() ): ?>
+                                        <a href="<?=$linkPage->getFullURL()?>"><?=$title?></a>
+                                    <? else: ?>
+                                        <a href="/index.php/<?=$pages[$i]?>"><?=$title?></a>
+                                    <? endif; ?>
+                                </li>
+                            <?
+                        }
+                        ?>
+                                  </ul>
+                              </li>
+                          </ul>
                         <?
                     }
-                    ?>
-                              </ul>
-                          </li>
-                      </ul>
-                    <?
                 }
-            }
-        ?>
+            ?>
 
 
-        <!-- Create new page dropdown -->
-        <ul class="nav pull-left" role="navigation" >
-            <li class="dropdown" id="p-newpage">
-                <a data-toggle="dropdown" class="dropdown-toggle" role="button" style="font-weight: bold;">New <b class="caret"></b></a>
-                <ul class="dropdown-menu" style="padding-bottom: 15px;">
-                    <li>
-                        <div class="input-group has-light hidden-xs hidden-sm" style="margin-right: 10px; padding: 0 10px 0 20px;   margin-bottom: 20px; width: 250px;">
-                            <form style="  display: table;" class="navbar-search" action="/index.php" id="searchform" method="get">
-                                <input id="createNewPage" class="form-control" type="search" title="Create new page" placeholder="New page title" name="title" value="" autocomplete="off">
-                                <input type="hidden" name="veaction" value="edit" />
-                                <span class="input-group-btn">
-                                    <input type="submit" name="go" value="Create" title="Go to a page with this exact name if exists" id="mw-createPagebtn" class="searchButton btn btn-default" />
-                                </span>
-                            </form>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="/index.php/Special:FormEdit/Clause">Create new <b>Clause</b></a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+            <!-- Create new page dropdown -->
+            <ul class="nav pull-left" role="navigation" >
+                <li class="dropdown" id="p-newpage">
+                    <a data-toggle="dropdown" class="dropdown-toggle" role="button" style="font-weight: bold;">New <b class="caret"></b></a>
+                    <ul class="dropdown-menu" style="padding-bottom: 15px;">
+                        <li>
+                            <div class="input-group has-light hidden-xs hidden-sm" style="margin-right: 10px; padding: 0 10px 0 20px;   margin-bottom: 20px; width: 250px;">
+                                <form style="  display: table;" class="navbar-search" action="/index.php" id="searchform" method="get">
+                                    <input id="createNewPage" class="form-control" type="search" title="Create new page" placeholder="New page title" name="title" value="" autocomplete="off">
+                                    <input type="hidden" name="veaction" value="edit" />
+                                    <span class="input-group-btn">
+                                        <input type="submit" name="go" value="Create" title="Go to a page with this exact name if exists" id="mw-createPagebtn" class="searchButton btn btn-default" />
+                                    </span>
+                                </form>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/index.php/Special:FormEdit/Clause">Create new <b>Clause</b></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+
+      <? endif; ?>
+
 
         <? if( !$this->getSkin()->getUser()->isAnon() ): ?>
             <li style="font-weight: bold; margin-top:10px"> <?php $this->renderNavigation( array( 'EDIT' ) ); ?> </li>
@@ -289,7 +297,6 @@ class StrappingTemplate extends BaseTemplate
 
         # Sidebar items to display in navbar
         $this->renderNavigation( array( 'SIDEBARNAV' ) );
-    }
 
         ?>
 		
