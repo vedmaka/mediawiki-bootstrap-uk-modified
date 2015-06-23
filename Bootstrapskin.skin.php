@@ -261,6 +261,12 @@ class StrappingTemplate extends BaseTemplate
                         <li>
                             <a href="/index.php/Special:FormEdit/Clause">Create new <b>Clause</b></a>
                         </li>
+                        <li>
+                            <a href="/index.php/Special:FormEdit/Clause_type">Create new <b>Clause type</b></a>
+                        </li>
+                        <li>
+                            <a href="/index.php/Special:FormEdit/Checklist">Create new <b>Checklist</b></a>
+                        </li>
                     </ul>
                 </li>
             </ul>
