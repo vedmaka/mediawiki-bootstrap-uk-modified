@@ -262,14 +262,19 @@ class StrappingTemplate extends BaseTemplate
                             <a href="/index.php/Special:FormEdit/Clause">Create new <b>Clause</b></a>
                         </li>
                         <li>
-                            <a href="/index.php/Special:FormEdit/Process">Create new <b>Process</b></a>
-                        </li>
-                        <li>
                             <a href="/index.php/Special:FormEdit/Clause_type">Create new <b>Clause type</b></a>
                         </li>
                         <li>
                             <a href="/index.php/Special:FormEdit/Checklist">Create new <b>Checklist</b></a>
                         </li>
+
+                        <li>
+                            <a href="/index.php/Special:FormEdit/Process">Create new <b>Process</b></a>
+                        </li>
+                        <li>
+                            <a href="/index.php/Special:FormEdit/Process_role">Create new <b>Process role</b></a>
+                        </li>
+
                     </ul>
                 </li>
             </ul>
