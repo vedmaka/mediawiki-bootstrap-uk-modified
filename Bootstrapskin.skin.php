@@ -268,6 +268,8 @@ class StrappingTemplate extends BaseTemplate
                             <a href="/index.php/Special:FormEdit/Checklist">Create new <b>Checklist</b></a>
                         </li>
 
+                        <li class="new-menu-separator"></li>
+
                         <li>
                             <a href="/index.php/Special:FormEdit/Process">Create new <b>Process</b></a>
                         </li>

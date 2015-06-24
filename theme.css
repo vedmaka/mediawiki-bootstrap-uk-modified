@@ -362,3 +362,16 @@ h5 {
 .mw-editsection-divider {
     padding: 0 3px 0 3px;
 }
+
+li.new-menu-separator {
+    text-align: center;
+}
+
+li.new-menu-separator:after {
+    width: 90%;
+    margin: 0;
+    height: 2px;
+    background-color: #2b82bc;
+    display: inline-block;
+    content: "";
+}
