@@ -219,7 +219,7 @@ class StrappingTemplate extends BaseTemplate
                         <?
                         $titles = $matches[1];
                         $pages = $matches[2];
-                        foreach( $matches as $i => $item ) {
+                        foreach( $titles as $i => $item ) {
                             $title = $titles[$i];
                             $linkPage = Title::newFromText( $pages[$i] );
                             ?>
