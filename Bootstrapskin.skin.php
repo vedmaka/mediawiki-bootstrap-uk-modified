@@ -273,8 +273,21 @@ class StrappingTemplate extends BaseTemplate
                         <li>
                             <a href="/index.php/Special:FormEdit/Process">Create new <b>Process</b></a>
                         </li>
-                        <li>
+
+                        <!--<li>
                             <a href="/index.php/Special:FormEdit/Process_role">Create new <b>Process role</b></a>
+                        </li>-->
+
+                        <li>
+                            <div class="input-group has-light hidden-xs hidden-sm" style="margin-right: 10px; padding: 0 10px 0 20px;   margin-bottom: 20px; width: 250px; margin-top: 5px;">
+                                <form style="  display: table;" class="navbar-search" action="/index.php" method="get">
+                                    <input class="form-control" type="search" title="Create process role" placeholder="Role name" name="title" value="" autocomplete="off">
+                                    <input type="hidden" name="veaction" value="edit" />
+                                    <span class="input-group-btn">
+                                        <input type="submit" name="go" value="Create role" class="searchButton btn btn-default" />
+                                    </span>
+                                </form>
+                            </div>
                         </li>
 
                     </ul>
