@@ -177,7 +177,7 @@ class StrappingTemplate extends BaseTemplate
 
 <div id="userbar" class="navbar container-fluid">
   <div class="navbar-inner">
-      <div class="col-md-8 pull-left" style="padding-left: 0; margin-left: 0;">
+      <div class="col-md-10 pull-left" style="padding-left: 0; margin-left: 0;">
 
       <ul id="tabs-default-lighter" class="nav nav-tabs nav-tabs-lighter">
 
@@ -332,7 +332,7 @@ class StrappingTemplate extends BaseTemplate
       </div>
 	  </div>
 
-      <div class="pull-right col-md-4">
+      <div class="pull-right col-md-2">
         <?php
         # Personal menu (at the right)
         # $this->renderNavigation( array( 'PERSONAL' ) );
