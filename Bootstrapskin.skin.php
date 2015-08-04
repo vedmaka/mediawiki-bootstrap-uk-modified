@@ -270,7 +270,7 @@ class StrappingTemplate extends BaseTemplate
                         </li>
 
                         <li>
-                            <a href="/index.php/Special:FormEdit/Action_review">Create new <b>Action review</b></a>
+                            <a href="/index.php/Special:FormEdit/ActionReview">Create new <b>Action review</b></a>
                         </li>
 
                         <li class="new-menu-separator"></li>
