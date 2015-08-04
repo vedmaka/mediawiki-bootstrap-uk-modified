@@ -264,6 +264,11 @@ class StrappingTemplate extends BaseTemplate
                         <li>
                             <a href="/index.php/Special:FormEdit/Clause_type">Create new <b>Clause type</b></a>
                         </li>
+
+                        <li>
+                            <a href="/index.php/Special:FormEdit/Checklist">Create new <b>Checklist</b></a>
+                        </li>
+
                         <li>
                             <a href="/index.php/Special:FormEdit/Checklist">Create new <b>Checklist</b></a>
                         </li>
@@ -271,7 +276,7 @@ class StrappingTemplate extends BaseTemplate
                         <li class="new-menu-separator"></li>
 
                         <li>
-                            <a href="/index.php/Special:FormEdit/Process">Create new <b>Process</b></a>
+                            <a href="/index.php/Special:FormEdit/Action_review">Create new <b>Action review</b></a>
                         </li>
 
                         <!--<li>
