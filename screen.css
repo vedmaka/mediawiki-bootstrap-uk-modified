@@ -598,3 +598,12 @@ select, input[type="text"], input[type="password"], input[type="datetime"], inpu
     height:auto;
     display:block;
 }
+
+#sandbox-notice {
+  background-color: #FFE5B6;
+  color: black;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  margin-bottom: 10px;
+}

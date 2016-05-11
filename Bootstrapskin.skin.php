@@ -120,6 +120,7 @@ class StrappingTemplate extends BaseTemplate
         global $wgBootstrapSkinUseStandardLayout;
         global $wgBootstrapSkinUseSidebar;
         global $wgBootStrapSkinSideBar;
+        global $wgSandboxNotice;
 
         if ( !$wgSearchPlacement ) {
             $wgSearchPlacement['header'] = true;
@@ -172,6 +173,10 @@ class StrappingTemplate extends BaseTemplate
         // Output HTML Page
         $this->html( 'headelement' );
         ?>
+
+        <? if( $wgSandboxNotice && !empty($wgSandboxNotice) ): ?>
+        <div id="sandbox-notice"><?= $wgSandboxNotice ?></div>
+        <? endif; ?>
 
         <?php if ( $wgGroupPermissions['*']['edit'] || $wgBootstrapSkinAnonNavbar || $this->data['loggedin'] ) { ?>
 
@@ -273,10 +278,18 @@ class StrappingTemplate extends BaseTemplate
                             <a href="/index.php/Special:FormEdit/ActionReview">Create new <b>Action review</b></a>
                         </li>
 
+                        <li>
+                            <a href="/index.php/Special:FormEdit/TrSample">Create new <b>Training page</b></a>
+                        </li>
+
                         <li class="new-menu-separator"></li>
 
                         <li>
                             <a href="/index.php/Special:FormEdit/Process">Create new <b>Process</b></a>
+                        </li>
+
+                        <li>
+                            <a href="/index.php/Special:FormEdit/Client">Create new <b>Client</b></a>
                         </li>
 
                         <!--<li>
