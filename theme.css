@@ -375,3 +375,7 @@ li.new-menu-separator:after {
     display: inline-block;
     content: "";
 }
+
+.subpages {
+    display: block;
+}
