@@ -41,6 +41,7 @@ $wgResourceModules['skins.bootstrapskin'] = array(
                 'bootstrap/bootstrap/css/misc.css' => array( 'media' => 'screen' ),
                 //'bootstrap/bootstrap/css/social-buttons.css' => array( 'media' => 'screen' ),
 				//'bootstrap/bootstrap/css/prettify.css' => array( 'media' => 'screen' ),
+	            'bootstrap/print.css' => array( 'media' => 'print' )
 	),
 
 	'scripts' => array(
