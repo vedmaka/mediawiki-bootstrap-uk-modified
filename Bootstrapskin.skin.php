@@ -595,7 +595,7 @@ class StrappingTemplate extends BaseTemplate
                         $navTemp = $this->data['content_actions']['form_edit'];
                     }
 
-                    echo "<!--".print_r($this->data['content_actions'],1)."-->";
+                    //echo "<!--".print_r($this->data['content_actions'],1)."-->";
 
                     if ( $navTemp ) { ?>
                         <div class="actions pull-left nav">
