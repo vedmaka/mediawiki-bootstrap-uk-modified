@@ -379,3 +379,18 @@ li.new-menu-separator:after {
 .subpages {
     display: block;
 }
+
+/* fix for Semnatic Forms tokens input (select2) */
+
+#sfForm ul.select2-choices {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+#sfForm ul.select2-choices li.select2-search-choice {
+    font-size: 15px;
+}
+
+#sfForm ul.select2-choices li.select2-search-choice .select2-search-choice-close {
+    top: 11px;
+}
