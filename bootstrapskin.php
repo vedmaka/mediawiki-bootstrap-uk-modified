@@ -45,7 +45,7 @@ $wgResourceModules['skins.bootstrapskin'] = array(
 	),
 
 	'scripts' => array(
-	    'bootstrap/bootstrap/js/jquery-ui.min.js',
+	    //'bootstrap/bootstrap/js/jquery-ui.min.js',
 		'bootstrap/bootstrap/js/bootstrap.js',
 		'bootstrap/skin.js',
 		'bootstrap/bootstrap/js/buttons.js',

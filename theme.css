@@ -380,7 +380,7 @@ li.new-menu-separator:after {
     display: block;
 }
 
-/* fix for Semnatic Forms tokens input (select2) */
+/* fix for Semantic Forms tokens input (select2) */
 
 #sfForm ul.select2-choices {
     margin-left: 0;
@@ -394,3 +394,8 @@ li.new-menu-separator:after {
 #sfForm ul.select2-choices li.select2-search-choice .select2-search-choice-close {
     top: 11px;
 }
+
+#sfForm table.formtable th {
+    padding-top: 13px !important;
+}
+

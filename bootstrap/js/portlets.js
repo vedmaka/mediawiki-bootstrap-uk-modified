@@ -2,13 +2,13 @@
 
     $(function() {
 
-        $( ".column" ).sortable({
+        /*$( ".column" ).sortable({
             connectWith: ".column",
             handle: ".panel-heading",
             cancel: ".portlet-toggle",
             placeholder: "portlet-placeholder ui-corner-all",
             forcePlaceholderSize: true
-        });
+        });*/
 
         var body = $('body');
         body.on('click', '.portlet > .panel > .panel-heading > .panel-options > .panel-collapse, .portlet > .panel > .panel-heading > .panel-options > .panel-expand', function (evt) {
