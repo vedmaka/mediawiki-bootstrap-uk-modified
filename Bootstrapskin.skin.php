@@ -395,7 +395,7 @@ class StrappingTemplate extends BaseTemplate
         <!-- /sitenotice -->
     <?php endif; ?>
 
-    <h1 id="firstHeading" class="firstHeading page-header" style="margin-left: -15px;">
+    <h1 id="firstHeading" class="firstHeading page-header" >
                         <span dir="auto"><?php $this->html( 'title' ) ?></span>
                     </h1>
 
