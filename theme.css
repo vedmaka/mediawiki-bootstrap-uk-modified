@@ -409,6 +409,20 @@ li.new-menu-separator:after {
     font-size: 0.8em;
 }
 
+.oo-ui-window-frame {
+    font-size: 0.9em;
+}
+
+.oo-ui-widget.oo-ui-buttonSelectWidget,
+.oo-ui-widget.oo-ui-buttonSelectWidget > .oo-ui-buttonOptionWidget,
+.oo-ui-widget.oo-ui-buttonSelectWidget > .oo-ui-buttonOptionWidget .oo-ui-buttonElement-button {
+    box-sizing: content-box;
+}
+
+/*.oo-ui-window-frame .ve-ui-mwTitleInputWidget {
+    width: 25em;
+}*/
+
 /* fix for general style */
 #innerbodycontent.row {
     margin-left: auto;
