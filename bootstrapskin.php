@@ -34,7 +34,7 @@ $wgResourceModules['skins.bootstrapskin'] = array(
                 'bootstrap/theme.css' => array( 'media' => 'screen' ),
 				'bootstrap/bootstrap/css/jquery-ui.min.css' => array( 'media' => 'screen' ),
 				'bootstrap/bootstrap/css/font.css' => array( 'media' => 'screen' ),
-				'bootstrap/bootstrap/css/jquery-ui.min.css' => array( 'media' => 'screen' ),
+				//'bootstrap/bootstrap/css/jquery-ui.min.css' => array( 'media' => 'screen' ),
 				//'bootstrap/bootstrap/css/glyphicons.css' => array( 'media' => 'screen' ),
 				//'bootstrap/bootstrap/css/fam-icons.css' => array( 'media' => 'screen' ),
                 'bootstrap/bootstrap/css/typography.css' => array( 'media' => 'screen' ),

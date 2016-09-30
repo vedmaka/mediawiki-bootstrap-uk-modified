@@ -38,6 +38,10 @@ div.ve-ui-toolbar div, div.ve-ui-toolbar span, div.ve-ui-toolbar a {
     -webkit-box-sizing: inherit !important;
 }
 
+.oo-ui-popupToolGroup .oo-ui-tool-link {
+    box-sizing: border-box !important;
+}
+
 footer {
     padding-top: 100px;
 }
@@ -399,3 +403,8 @@ li.new-menu-separator:after {
     padding-top: 13px !important;
 }
 
+/* fix for VE */
+.ve-init-target > .ve-init-mw-viewPageTarget-toolbar
+ {
+    font-size: 0.8em;
+}
