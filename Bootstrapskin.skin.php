@@ -395,6 +395,13 @@ class StrappingTemplate extends BaseTemplate
         <!-- /sitenotice -->
     <?php endif; ?>
 
+    <?php
+        if( class_exists('Xendo') && $this->getSkin()->getUser()->isLoggedIn() && $this->getSkin()->getUser()->getOption('xendo-enabled') ) {
+            $xendo = new Xendo();
+            echo $xendo->getHtml();
+        }
+    ?>
+
     <h1 id="firstHeading" class="firstHeading page-header" >
                         <span dir="auto"><?php $this->html( 'title' ) ?></span>
                     </h1>

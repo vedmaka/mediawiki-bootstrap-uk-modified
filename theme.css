@@ -409,6 +409,11 @@ li.new-menu-separator:after {
     font-size: 0.8em;
 }
 
+.ve-init-target .ve-init-mw-viewPageTarget-toolbar .oo-ui-toolbar-actions .oo-ui-buttonElement a.oo-ui-buttonElement-button,
+.ve-init-target .ve-init-mw-viewPageTarget-toolbar .oo-ui-toolbar-actions .oo-ui-buttonElement a.oo-ui-buttonElement-button .oo-ui-labelElement-label {
+    font-size: 1.1em;
+}
+
 .oo-ui-window-frame {
     font-size: 0.9em;
 }
@@ -428,3 +433,19 @@ li.new-menu-separator:after {
     margin-left: auto;
     margin-right: auto;
 }
+
+#firstHeading {
+    margin-top: 20px;
+}
+
+#xendo-widget-container {
+    margin-top: 10px;
+}
+
+/*
+@media (min-width: 1400px) {
+    #xendo-widget-container {
+        position: relative;
+        left: -90px;
+    }
+}*/
