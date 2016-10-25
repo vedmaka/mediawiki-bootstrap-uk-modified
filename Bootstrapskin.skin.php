@@ -847,7 +847,7 @@ class StrappingTemplate extends BaseTemplate
                     ?>
                     <ul class="nav" role="navigation">
                         <li class="dropdown"
-                            class="vectorMenu<?php if ( count( $theData ) == 0 ) echo ' emptyPortlet'; ?>">
+                            class="vectorMenu<?php //if ( count( $theData ) == 0 ) echo ' emptyPortlet'; ?>">
                             <a data-toggle="dropdown" class="dropdown-toggle" role="button">Personal <b
                                     class="caret"></b></a>
                             <ul class="dropdown-menu">
