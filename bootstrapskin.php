@@ -41,7 +41,9 @@ $wgResourceModules['skins.bootstrapskin'] = array(
                 'bootstrap/bootstrap/css/misc.css' => array( 'media' => 'screen' ),
                 //'bootstrap/bootstrap/css/social-buttons.css' => array( 'media' => 'screen' ),
 				//'bootstrap/bootstrap/css/prettify.css' => array( 'media' => 'screen' ),
-	            'bootstrap/print.css' => array( 'media' => 'print' )
+	            'bootstrap/print.css' => array( 'media' => 'print' ),
+	            // styles for main page
+	            'bootstrap/html_mockups/index.css' => array( 'media' => 'screen' ),
 	),
 
 	'scripts' => array(
@@ -52,7 +54,8 @@ $wgResourceModules['skins.bootstrapskin'] = array(
         'bootstrap/bootstrap/js/portlets.js',
 		'bootstrap/bootstrap/js/misc.js',
         'bootstrap/bootstrap/js/tab.js',
-      //'bootstrap/bootstrap/js/run_prettify.js',	  
+      //'bootstrap/bootstrap/js/run_prettify.js',
+		'bootstrap/html_mockups/index.js'
 	),	
         'remoteBasePath' => &$GLOBALS['wgStylePath'],
         'localBasePath' => &$GLOBALS['wgStyleDirectory'],

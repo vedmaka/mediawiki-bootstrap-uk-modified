@@ -104,6 +104,8 @@ class SkinBootstrap extends SkinTemplate
 class StrappingTemplate extends BaseTemplate
 {
 
+    private $isMainPage = false;
+
     /* Functions */
 
     /**
@@ -169,6 +171,12 @@ class StrappingTemplate extends BaseTemplate
         $this->data['view_urls'] = $nav['views'];
         $this->data['action_urls'] = $nav['actions'];
         $this->data['variant_urls'] = $nav['variants'];
+
+        // Variables
+
+        if( $this->getSkin()->getTitle() && $this->getSkin()->getTitle()->isMainPage() ) {
+            $this->isMainPage = true;
+        }
 
         // Output HTML Page
         $this->html( 'headelement' );
@@ -402,9 +410,11 @@ class StrappingTemplate extends BaseTemplate
         }
     ?>
 
+    <? if( !$this->isMainPage ): ?>
     <h1 id="firstHeading" class="firstHeading page-header" >
                         <span dir="auto"><?php $this->html( 'title' ) ?></span>
                     </h1>
+    <? endif; ?>
 
       <!-- bodyContent -->
       <div id="bodyContent">

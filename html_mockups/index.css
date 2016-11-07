@@ -1,0 +1,215 @@
+.radiant-main-page {
+    color: #515151;
+    font-size: 17px;
+}
+
+.radiant-main-content-area {
+    /*padding-left: 40px;*/
+}
+
+.radiant-alert-box {
+    padding: 8px 10px;
+    text-align: left;
+    font-size: 17px;
+    background-color: #fee7b5;
+}
+
+.radiant-alert-box p {
+    margin: 0 !important;
+}
+
+.radiant-alert-box .radiant-alert-icon {
+    background-color: #f69f49;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-right: 10px;
+    vertical-align: baseline;
+    line-height: 28px;
+    float: left;
+}
+
+.radiant-main-page .radiant-main-header {
+    font-size: 19px;
+    font-weight: bold;
+    color: #515151;
+    margin: 15px 0;
+}
+
+.radiant-main-content-area h2 {
+    margin: 15px 0;
+}
+.radiant-main-content-area h2 .mw-headline {
+    font-size: 19px;
+    font-weight: bold;
+    color: #515151;
+}
+
+.radiant-main-content-area h3 {
+    margin: 15px 0;
+}
+.radiant-main-content-area h3 .mw-headline {
+    font-size: 18px;
+    font-weight: 500;
+    color: #515151;
+}
+
+.radiant-quick-nav {
+    margin: 0 !important;
+    padding: 0;
+}
+
+.radiant-quick-nav li {
+    list-style: none;
+    display: inline-block;
+    background-color: white;
+    padding: 4px 8px 6px 16px;
+    position: relative;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.radiant-quick-nav li::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    background-color: #ebebeb;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.radiant-quick-nav li a {
+    color: #656565;
+    display: inline-block;
+    border-bottom: 1px dotted #656565;
+    padding-bottom: 0;
+}
+
+.radiant-main-panel {
+    margin: 20px 0;
+}
+
+.radiant-main-panel .radiant-main-panel-content .radiant-ul-horizontal > ul {
+    margin-left: 15px !important;
+}
+.radiant-main-panel .radiant-main-panel-content ul.radiant-main-date-list {
+    margin: 0 !important;
+}
+
+.radiant-main-panel .radiant-main-panel-content > h2:first-child {
+    margin-top: 0;
+}
+
+.radiant-main-panel .radiant-main-header {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ebebeb;
+    text-indent: 10px;
+}
+
+.radiant-main-panel .radiant-main-panel-content {
+    background-color: white;
+    padding: 10px 15px;
+}
+
+.radiant-main-panel .radiant-textless-header {
+    font-size: 0;
+    background-color: #ebebeb;
+    height: 10px;
+}
+
+.radiant-ul-horizontal {
+
+}
+
+.radiant-ul-horizontal ul {
+    overflow: hidden;
+    margin: 20px 0 20px 0 !important;
+    padding: 0;
+}
+
+.radiant-ul-horizontal ul li {
+    display: inline;
+    float: left;
+    margin-left: 0;
+    margin-bottom: 5px;
+    width: 33%;
+}
+
+.radiant-ul-horizontal ul li::before {
+    content: "•";
+    display: inline-block;
+    font-size: 13px;
+    margin-right: 4px;
+    color: #236b9b;
+}
+
+.radiant-main-sidebar .radiant-main-panel:first-child {
+    margin-top: 0;
+}
+
+.radiant-main-date-list {
+    margin: 0;
+    padding: 0 0 0 0 !important;
+}
+
+.radiant-main-date-list li::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #236b9b;
+    margin-right: 5px;
+    position: relative;
+    top: -4px;
+}
+
+.radiant-main-date-list li + li.radiant-date-list-header {
+    margin-top: 15px;
+}
+
+.radiant-main-date-list li.radiant-date-list-header {
+    color: #8b8b8b;
+    font-style: italic;
+    text-align: left;
+    margin-bottom: 12px;
+    list-style: none;
+    font-weight: 500;
+    position: relative;
+    padding-left: 0;
+    overflow: hidden;
+}
+.radiant-main-date-list li.radiant-date-list-header span {
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    padding-right: 10px;
+}
+
+.radiant-main-date-list li.radiant-date-list-header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(211, 211, 211, 0.55);
+    top: 50%;
+    right: 0;
+}
+
+.radiant-main-date-list li {
+    margin: 8px 0;
+    list-style: none;
+    line-height: 21px;
+    padding-left: 15px;
+    word-break: break-all;
+}
+
+.radiant-main-date-list li a {
+    font-size: 16px;
+}
