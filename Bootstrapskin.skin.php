@@ -272,9 +272,9 @@ class StrappingTemplate extends BaseTemplate
                                 </form>
                             </div>
                         </li>
-                        <li>
+                        <!--<li>
                             <a href="/index.php/Special:FormEdit/Clause">Create new <b>Clause</b></a>
-                        </li>
+                        </li>-->
                         <li>
                             <a href="/index.php/Special:FormEdit/Clause_type">Create new <b>Clause type</b></a>
                         </li>
@@ -291,7 +291,7 @@ class StrappingTemplate extends BaseTemplate
                             <a href="/index.php/Special:FormEdit/TrSample">Create new <b>Training page</b></a>
                         </li>
 
-                        <li class="new-menu-separator"></li>
+                        <!--<li class="new-menu-separator"></li>
 
                         <li>
                             <a href="/index.php/Special:FormEdit/Process">Create new <b>Process</b></a>
@@ -299,13 +299,13 @@ class StrappingTemplate extends BaseTemplate
 
                         <li>
                             <a href="/index.php/Special:FormEdit/Client">Create new <b>Client</b></a>
-                        </li>
+                        </li>-->
 
                         <!--<li>
                             <a href="/index.php/Special:FormEdit/Process_role">Create new <b>Process role</b></a>
                         </li>-->
 
-                        <li>
+                        <!--<li>
                             <div class="input-group has-light hidden-xs hidden-sm" style="margin-right: 10px; padding: 0 10px 0 20px;   margin-bottom: 20px; width: 250px; margin-top: 5px;">
                                 <form style="  display: table;" class="navbar-search" action="/index.php" method="get">
                                     <input class="form-control" type="search" title="Create process role" placeholder="Role name" name="title" value="" autocomplete="off">
@@ -315,7 +315,7 @@ class StrappingTemplate extends BaseTemplate
                                     </span>
                                 </form>
                             </div>
-                        </li>
+                        </li>-->
 
                     </ul>
                 </li>
