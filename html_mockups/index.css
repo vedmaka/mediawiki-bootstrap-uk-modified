@@ -213,3 +213,78 @@
 .radiant-main-date-list li a {
     font-size: 16px;
 }
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+.radiant-main-page-reworked {
+
+}
+
+.radiant-main-page-reworked > h1 {
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.radiant-main-page-reworked .radiant-main-page-reworked-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.radiant-main-page-reworked .radiant-main-panel {
+    padding: 8px;
+    margin: 0 0 0 0;
+    max-width: 50%;
+    flex: 1 1 auto;
+}
+
+.radiant-main-page-reworked .radiant-main-panel.third-width-flex {
+    max-width: 33%;
+}
+
+.radiant-main-page-reworked .radiant-main-panel.full-width-flex {
+    max-width: 100%;
+}
+
+.radiant-main-page-reworked .radiant-main-panel .radiant-main-panel-content {
+    padding-bottom: 20px;
+}
+
+.radiant-main-page-reworked .radiant-main-panel .radiant-main-panel-content ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.radiant-main-page-reworked .radiant-main-panel .radiant-main-panel-content ul li {
+    flex: 1 0 50%;
+    box-sizing: border-box;
+    padding: 1px;
+}
+
+.radiant-main-page-reworked .radiant-main-panel.full-width-flex ul li {
+    flex: 0 0 33%;
+}
+
+.radiant-main-page-reworked .radiant-main-panel.third-width-flex ul li {
+    flex: 0 0 100%;
+}
+
+@media all and (max-width: 796px) {
+    .radiant-main-page-reworked .radiant-main-panel,
+    .radiant-main-page-reworked .radiant-main-panel.third-width-flex,
+    .radiant-main-page-reworked .radiant-main-panel.half-width-flex {
+        max-width: 100%;
+    }
+
+    .radiant-main-page-reworked .radiant-main-panel.full-width-flex ul li {
+        flex: 1 0 50%;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .radiant-main-page-reworked .radiant-main-panel ul li,
+    .radiant-main-page-reworked .radiant-main-panel.third-width-flex ul li,
+    .radiant-main-page-reworked .radiant-main-panel.half-width-flex ul li {
+        flex: 1 0 100% !important;
+    }
+}
