@@ -240,6 +240,12 @@
 
 .radiant-main-page-reworked .radiant-main-panel.third-width-flex {
     max-width: 33%;
+    width: 33%;
+}
+
+.radiant-main-page-reworked .radiant-main-panel.half-width-flex {
+    max-width: 50%;
+    width: 50%;
 }
 
 .radiant-main-page-reworked .radiant-main-panel.full-width-flex {
