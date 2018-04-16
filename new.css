@@ -183,3 +183,20 @@ h1, h2, h3, h4 {
 #toc ul {
 	font-size: 16px;
 }
+
+.simplechanges-type {
+	display: inline-block;
+	padding: 3px 3px;
+	border-radius: 4px;
+	background-color: gray;
+	color: white;
+	font-size: 14px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 14px;
+	margin-left: 4px;
+}
+
+.simplechanges-date {
+	color: gray;
+}
