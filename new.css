@@ -47,15 +47,6 @@ body, html {
 	color: #696969;
 }
 
-.nav-tabs-lighter.nav-tabs > li > a#ca-ve-edit:hover {
-	color: #696969;
-	background: none;
-	border: 0;
-	text-shadow: none;
-	text-decoration: none;
-	box-shadow: none;
-}
-
 .nav-tabs-lighter.nav-tabs .btn-default {
 	background-color: #696969;
 	border-color: #696969;
@@ -87,6 +78,15 @@ body, html {
 .nav-tabs-lighter.nav-tabs > li > a:hover, .nav-tabs-lighter.nav-tabs > li > a:focus {
 	background-color: #696969;
 	color: white !important;
+}
+
+.nav-tabs-lighter.nav-tabs > li > a#ca-ve-edit:hover {
+	color: #696969 !important;
+	background: none !important;
+	border: 0 !important;
+	text-shadow: none !important;
+	text-decoration: none !important;
+	box-shadow: none !important;
 }
 
 ul.nav-tabs-lighter.nav-tabs > ul > li a {
