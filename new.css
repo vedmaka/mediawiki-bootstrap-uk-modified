@@ -84,6 +84,11 @@ body, html {
 	color: white !important;
 }
 
+.nav-tabs-lighter.nav-tabs > li > a:hover, .nav-tabs-lighter.nav-tabs > li > a:focus {
+	background-color: #696969;
+	color: white !important;
+}
+
 ul.nav-tabs-lighter.nav-tabs > ul > li a {
 		font-size: 16px !important;
 		font-weight: normal !important;
