@@ -199,4 +199,5 @@ h1, h2, h3, h4 {
 
 .simplechanges-date {
 	color: gray;
+	display: block;
 }
