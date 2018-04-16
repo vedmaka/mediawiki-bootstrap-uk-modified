@@ -28,7 +28,23 @@ body, html {
 	line-height: 24px;
 	font-weight: normal !important;
 	transition: none;
-	color:#696969;
+	color: #696969;
+}
+
+.nav-tabs-lighter.nav-tabs > li > a {
+	background: none;
+	border: 0;
+	text-shadow: none;
+	text-decoration: none;
+	box-shadow: none;
+	display: block;
+	padding: 15px 20px;
+	margin: 0;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: normal !important;
+	transition: none;
+	color: #696969;
 }
 
 .nav-tabs-lighter.nav-tabs > li > a#ca-ve-edit:hover {
@@ -38,6 +54,17 @@ body, html {
 	text-shadow: none;
 	text-decoration: none;
 	box-shadow: none;
+}
+
+.nav-tabs-lighter.nav-tabs .btn-default {
+	background-color: #696969;
+	border-color: #696969;
+}
+
+.nav-tabs-lighter.nav-tabs input {
+	border-color: #696969;
+	-webkit-box-shadow: inset 0 -3px 0 0 #696969;
+	box-shadow: inset 0 -3px 0 0 #696969;
 }
 
 .nav-tabs > li {
@@ -50,6 +77,11 @@ body, html {
 
 .nav-tabs > li.logo {
 	float: left !important;
+}
+
+.nav-tabs-lighter.nav .open > a, .nav-tabs-lighter.nav .open > a:hover, .nav-tabs-lighter.nav .open > a:focus {
+	background-color: #696969;
+	color: white !important;
 }
 
 ul.nav-tabs-lighter.nav-tabs > ul > li a {
