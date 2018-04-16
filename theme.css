@@ -22,7 +22,7 @@
 }
 
 #tabs-default-lighter a.dropdown-toggle {
-    font-weight: bold !important;
+    /*font-weight: bold !important;*/
 }
 
 .oo-ui-processDialog-location {

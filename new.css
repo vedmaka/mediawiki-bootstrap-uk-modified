@@ -1,0 +1,148 @@
+/*
+Blue:		#11aaff
+Visited:	#6611CC
+*/
+
+a {
+	color: #11aaff;
+}
+
+a:visited {
+	color: #6611CC;
+}
+
+body, html {
+	background-color: white !important;
+}
+
+.nav-tabs-lighter.nav-tabs > li > a#ca-ve-edit {
+	background: none;
+	border: 0;
+	text-shadow: none;
+	text-decoration: none;
+	box-shadow: none;
+	display: block;
+	padding: 15px 20px;
+	margin: 0;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: normal !important;
+	transition: none;
+	color:#696969;
+}
+
+.nav-tabs-lighter.nav-tabs > li > a#ca-ve-edit:hover {
+	color: #696969;
+	background: none;
+	border: 0;
+	text-shadow: none;
+	text-decoration: none;
+	box-shadow: none;
+}
+
+.nav-tabs > li {
+	float: right;
+}
+
+.nav-tabs > ul {
+	float: right !important;
+}
+
+.nav-tabs > li.logo {
+	float: left !important;
+}
+
+ul.nav-tabs-lighter.nav-tabs > ul > li a {
+		font-size: 16px !important;
+		font-weight: normal !important;
+		color: #696969;
+}
+
+ul.nav-tabs-lighter.nav-tabs > li a {
+		font-size: 16px !important;
+		font-weight: normal !important;
+		color: #696969;
+}
+
+ul.nav-tabs-lighter.nav-tabs > ul > li a {
+		font-size: 16px !important;
+		font-weight: normal !important;
+		color: #696969;
+}
+ul.nav-tabs-lighter.nav-tabs a, a.dropdown-toggle {
+		color: #696969;
+}
+
+#tabs-default-lighter a.dropdown-toggle {
+	font-size: 16px;
+	padding: 15px 20px;
+	color: #696969;
+}
+
+#right-nav > li {
+	width: 100%;
+}
+
+#right-nav .input-group {
+	width: 100%;
+}
+
+#right-nav input, #right-nav form {
+	width: 100%;
+}
+
+#right-nav form input {
+	border-color: #696969;
+	-webkit-box-shadow: inset 0 -3px 0 0 #696969;
+	box-shadow: inset 0 -3px 0 0 #696969;
+}
+
+#firstHeading {
+	border-bottom: 0;
+	color: black;
+	font-weight: 600;
+	margin-top: 30px;
+}
+
+h1, h2, h3, h4 {
+	font-weight: 400;
+	font-family: "Lato", sans-serif;
+}
+
+#mw-content-text {
+	color: black;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+}
+
+#mw-content-text p,
+#mw-content-text ul,
+#mw-content-text ol {
+	color: black;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	line-height: 1.7;
+}
+
+#mw-content-text a {
+	font-weight: 400;
+}
+
+#mw-content-text a.external {
+	background: none !important;
+	padding-right: 0 !important;
+}
+
+#toc {
+	padding: 10px 15px;
+}
+
+#toc h2 {
+	font-size: 18px;
+	font-weight: normal;
+	margin: 10px 0;
+}
+
+#toc ul {
+	font-size: 16px;
+}

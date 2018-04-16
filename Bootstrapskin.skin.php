@@ -63,6 +63,7 @@ class SkinBootstrap extends SkinTemplate
         );
 
         $out->addHeadItem( 'responsive', '<meta name="viewport" content="width=device-width, initial-scale=1.0">' );
+		$out->addHeadItem('open_sans_font', '<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&amp;subset=cyrillic" rel="stylesheet">');
         $out->addModuleScripts( 'skins.bootstrapskin' );
     }
 
@@ -191,14 +192,14 @@ class StrappingTemplate extends BaseTemplate
 
 <div id="userbar" class="navbar container-fluid">
   <div class="navbar-inner">
-      <div class="col-md-10 pull-left" style="padding-left: 0; margin-left: 0;">
+      <div class="col-md-9 pull-left" style="padding-left: 0; margin-left: 0;">
 
       <ul id="tabs-default-lighter" class="nav nav-tabs nav-tabs-lighter">
 
-        <li style="margin-top:10px">
+        <li style="margin-top:10px" class="logo">
             <div class="actions pull-left nav">
                 <a id="b-edit" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" class="btn">
-                    <img style="width: 100px;" src="<?php $this->text( 'logopath' ); ?>" alt="<?php $this->html( 'sitename' ); ?>">
+                    <img style="width: 130px;" src="<?php $this->text( 'logopath' ); ?>" alt="<?php $this->html( 'sitename' ); ?>">
                 </a>
             </div>
         </li>
@@ -228,7 +229,7 @@ class StrappingTemplate extends BaseTemplate
                         ?>
                           <ul class="nav pull-left" role="navigation" >
                               <li class="dropdown" id="p-navigation">
-                                  <a data-toggle="dropdown" class="dropdown-toggle" role="button" style="font-weight: bold;">Navigation <b class="caret"></b></a>
+                                  <a data-toggle="dropdown" class="dropdown-toggle" role="button" >Navigation <b class="caret"></b></a>
                                   <ul class="dropdown-menu" style="padding-bottom: 15px;">
                         <?
                         $titles = $matches[1];
@@ -259,7 +260,7 @@ class StrappingTemplate extends BaseTemplate
             <!-- Create new page dropdown -->
             <ul class="nav pull-left" role="navigation" >
                 <li class="dropdown" id="p-newpage">
-                    <a data-toggle="dropdown" class="dropdown-toggle" role="button" style="font-weight: bold;">New <b class="caret"></b></a>
+                    <a data-toggle="dropdown" class="dropdown-toggle" role="button" >New <b class="caret"></b></a>
                     <ul class="dropdown-menu" style="padding-bottom: 15px;">
                         <li>
                             <div class="input-group has-light hidden-xs hidden-sm" style="margin-right: 10px; padding: 0 10px 0 20px;   margin-bottom: 20px; width: 250px;">
@@ -326,7 +327,7 @@ class StrappingTemplate extends BaseTemplate
 
 
         <? if( !$this->getSkin()->getUser()->isAnon() ): ?>
-            <li style="font-weight: bold; margin-top:10px"> <?php $this->renderNavigation( array( 'EDIT' ) ); ?> </li>
+            <li style=""> <?php $this->renderNavigation( array( 'EDIT' ) ); ?> </li>
         <? else: ?>
             <li style="margin-top:10px">
                 <div class="actions pull-left nav">
@@ -359,7 +360,7 @@ class StrappingTemplate extends BaseTemplate
       </div>
 	  </div>
 
-      <div class="pull-right col-md-2">
+      <div class="pull-right col-md-3">
         <?php
         # Personal menu (at the right)
         # $this->renderNavigation( array( 'PERSONAL' ) );
@@ -616,10 +617,15 @@ class StrappingTemplate extends BaseTemplate
                     //echo "<!--".print_r($this->data['content_actions'],1)."-->";
 
                     if ( $navTemp ) { ?>
-                        <div class="actions pull-left nav">
+
+
+                            <a id="<?=$navTemp['id']?>" href="<?php echo $navTemp['href']; ?>">
+                                <i class="icon-edit"></i> <?php echo $navTemp['text']; ?></a>
+
+	                    <!--<div class="actions pull-left nav">
                             <a id="<?=$navTemp['id']?>" href="<?php echo $navTemp['href']; ?>" class="btn" style="font-weight: bold;">
                                 <i class="icon-edit"></i> <?php echo $navTemp['text']; ?></a>
-                        </div>
+                        </div>-->
 
                     <?php }
                     break;

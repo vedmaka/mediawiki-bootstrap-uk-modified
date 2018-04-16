@@ -44,6 +44,7 @@ $wgResourceModules['skins.bootstrapskin'] = array(
 	            'bootstrap/print.css' => array( 'media' => 'print' ),
 	            // styles for main page
 	            'bootstrap/html_mockups/index.css' => array( 'media' => 'screen' ),
+	            'bootstrap/new.css' => array( 'media' => 'screen' )
 	),
 
 	'scripts' => array(
