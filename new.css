@@ -161,6 +161,10 @@ h1, h2, h3, h4 {
 	line-height: 1.7;
 }
 
+#mw-content-text ul > li ul {
+	margin: 0 0 0 1.6em;
+}
+
 #mw-content-text a {
 	font-weight: 400;
 }
