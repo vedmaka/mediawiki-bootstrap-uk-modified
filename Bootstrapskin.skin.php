@@ -196,10 +196,10 @@ class StrappingTemplate extends BaseTemplate
 
       <ul id="tabs-default-lighter" class="nav nav-tabs nav-tabs-lighter">
 
-        <li style="margin-top:10px" class="logo">
+        <li style="margin-top:15px" class="logo">
             <div class="actions pull-left nav">
-                <a id="b-edit" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" class="btn">
-                    <img style="width: 130px;" src="<?php $this->text( 'logopath' ); ?>" alt="<?php $this->html( 'sitename' ); ?>">
+                <a id="b-edit" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" class="">
+                    <img style="width: 140px;" src="<?php $this->text( 'logopath' ); ?>" alt="<?php $this->html( 'sitename' ); ?>">
                 </a>
             </div>
         </li>
