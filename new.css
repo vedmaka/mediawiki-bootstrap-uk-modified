@@ -209,3 +209,19 @@ h1, h2, h3, h4 {
 .logo > div > a {
 	padding: 10px 0 0 0;
 }
+
+table.wikitable td > ul {
+	margin-top: 0;
+}
+
+table.wikitable ul li {
+	font-size: 16px;
+}
+
+table.wikitable td ul + ul {
+	margin-top: 15px;
+}
+
+table.wikitable td p + ul {
+	margin-top: 15px;
+}
