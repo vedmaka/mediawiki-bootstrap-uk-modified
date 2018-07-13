@@ -607,3 +607,7 @@ select, input[type="text"], input[type="password"], input[type="datetime"], inpu
   padding: 15px 0;
   margin-bottom: 10px;
 }
+
+#toc > ul > li > ul > li > ul {
+  display: none !important;
+}
